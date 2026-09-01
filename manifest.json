@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Search Keyboard Navigator",
+  "version": "1.0",
+  "description": "Navigate search results using keyboard shortcuts (Shift+Arrows to select, Shift+Enter to open).",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/search*",
+        "*://*.duckduckgo.com/*",
+        "*://*.bing.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
